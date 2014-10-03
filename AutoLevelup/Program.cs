@@ -28,7 +28,7 @@ namespace AutoLevelup
             Thread t = new Thread(new ThreadStart(livellini));
             t.Start();
             Game.OnGameUpdate += Game_OnGameUpdate;
-            Game.PrintChat("<font color='#C80046'>Changelog:Morgana Support, Added</font>");
+            Game.PrintChat("<font color='#C80046'>Changelog:Annie & Zira Support, Added</font>");
 
         }
         public static void livellini()
@@ -41,7 +41,18 @@ namespace AutoLevelup
             else if (Player.BaseSkinName == "Alistar") abilitySequence = new int[] { 3, 1, 2, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2 };
             else if (Player.BaseSkinName == "Amumu") abilitySequence = new int[] { 3, 1, 2, 3, 2, 4, 3, 3, 3, 2, 4, 2, 2, 1, 1, 4, 1, 1 };
             else if (Player.BaseSkinName == "Anivia") abilitySequence = new int[] { 1, 3, 2, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2 };
-            else if (Player.BaseSkinName == "Annie") abilitySequence = new int[] { 1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 };
+            else if (Player.BaseSkinName == "Annie")
+                if (ObjectManager.Player.Masteries.Where(mastery => mastery.Page == MasteryPage.Utility)
+    .Any(mastery => mastery.Id == 100 && mastery.Points == 1))
+                {
+                    abilitySequence = new int[] { 2, 1, 1, 3, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 };
+                    tipo = " Support";
+                }
+                else
+                {
+                    abilitySequence = new int[] { 1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 };
+                    tipo = " Lane";
+                }
             else if (Player.BaseSkinName == "Ashe") abilitySequence = new int[] { 2, 1, 3, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3 };
             else if (Player.BaseSkinName == "Azir") abilitySequence = new int[] { 2, 1, 3, 2, 2, 4, 2, 1, 2, 1, 4, 1, 1, 3, 3, 4, 3, 3 };
             else if (Player.BaseSkinName == "Blitzcrank")
@@ -217,7 +228,6 @@ namespace AutoLevelup
                     abilitySequence = new int[] { 2, 3, 1, 2, 2, 4, 2, 3, 2, 3, 4, 3, 3, 1, 1, 4, 1, 1 };
                     tipo = " Lane";
                 }
-
             else if (Player.BaseSkinName == "Nami") abilitySequence = new int[] { 2, 1, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
             else if (Player.BaseSkinName == "Nasus")
             {
@@ -420,7 +430,18 @@ namespace AutoLevelup
             else if (Player.BaseSkinName == "Zed") abilitySequence = new int[] { 3, 2, 1, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2 };
             else if (Player.BaseSkinName == "Ziggs") abilitySequence = new int[] { 1, 3, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
             else if (Player.BaseSkinName == "Zilean") abilitySequence = new int[] { 1, 2, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
-            else if (Player.BaseSkinName == "Zyra") abilitySequence = new int[] { 3, 2, 1, 3, 1, 4, 3, 1, 3, 1, 4, 3, 1, 2, 2, 4, 2, 2 };
+            else if (Player.BaseSkinName == "Zyra")
+                if (ObjectManager.Player.Masteries.Where(mastery => mastery.Page == MasteryPage.Utility)
+        .Any(mastery => mastery.Id == 100 && mastery.Points == 1))
+                {
+                    abilitySequence = new int[] { 1, 2, 3, 3, 3, 4, 3, 1, 1, 3, 4, 1, 1, 2, 2, 4, 2, 2 };
+                    tipo = " Support";
+                }
+                else
+                {
+                    abilitySequence = new int[] { 3, 2, 1, 3, 1, 4, 3, 1, 3, 1, 4, 3, 1, 2, 2, 4, 2, 2 };
+                    tipo = " Lane";
+                }
             Game.PrintChat(Player.BaseSkinName + tipo + " loaded");
         }
         static void Game_OnGameUpdate(EventArgs args)
