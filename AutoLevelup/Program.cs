@@ -28,7 +28,7 @@ namespace AutoLevelup
             Thread t = new Thread(new ThreadStart(livellini));
             t.Start();
             Game.OnGameUpdate += Game_OnGameUpdate;
-            Game.PrintChat("<font color='#C80046'>Changelog:Annie & Zira Support, Added</font>");
+            Game.PrintChat("<font color='#C80046'>Changelog:Kalista, Added</font>");
 
         }
         public static void livellini()
@@ -158,6 +158,7 @@ namespace AutoLevelup
             else if (Player.BaseSkinName == "Jax") abilitySequence = new int[] { 3, 1, 2, 2, 2, 4, 2, 3, 2, 3, 4, 3, 3, 1, 1, 4, 1, 1 };
             else if (Player.BaseSkinName == "Jayce") { abilitySequence = new int[] { 1, 3, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 }; rOff = -1; }
             else if (Player.BaseSkinName == "Jinx") abilitySequence = new int[] { 1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 };
+            else if (Player.BaseSkinName == "Kalista") abilitySequence = new int[] { 1, 3, 2, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2 };
             else if (Player.BaseSkinName == "Karma") { abilitySequence = new int[] { 1, 3, 1, 2, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 }; rOff = -1; }
             else if (Player.BaseSkinName == "Karthus") abilitySequence = new int[] { 1, 3, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
             else if (Player.BaseSkinName == "Kassadin") abilitySequence = new int[] { 1, 2, 3, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
