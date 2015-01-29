@@ -413,7 +413,7 @@ namespace AutoLevelup
             {
                 if (Smite != SpellSlot.Unknown)
                 {
-                    abilitySequence = new int[] { 3, 1, 1, 2, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 };
+                    abilitySequence = new int[] { 2, 3, 1, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
                     tipo = " Jungler";
                 }
                 else
