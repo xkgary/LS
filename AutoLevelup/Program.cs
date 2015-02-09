@@ -464,7 +464,7 @@ namespace AutoLevelup
                 if (ObjectManager.Player.Masteries.Where(mastery => mastery.Page == MasteryPage.Utility)
         .Any(mastery => mastery.Id == 100 && mastery.Points == 1))
                 {
-                    abilitySequence = new int[] { 1, 2, 3, 3, 3, 4, 3, 1, 1, 3, 4, 1, 1, 2, 2, 4, 2, 2 };
+                    abilitySequence = new int[] { 3, 2, 1, 3, 3, 4, 3, 1, 3, 1, 4, 1, 1, 2, 2, 4, 2, 2 };
                     tipo = " Support";
                 }
                 else
