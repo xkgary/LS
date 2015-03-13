@@ -28,7 +28,7 @@ namespace AutoLevelup
             Thread t = new Thread(new ThreadStart(livellini));
             t.Start();
             Game.OnGameUpdate += Game_OnGameUpdate;
-            Game.PrintChat("<font color='#C80046'>Changelog:Fixed Urgot :( sorry </font>");
+            Game.PrintChat("<font color='#C80046'>Changelog:I am the best :^) </font>");
 
         }
         public static void livellini()
