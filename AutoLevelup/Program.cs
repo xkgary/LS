@@ -46,7 +46,7 @@ namespace AutoLevelup
                 if (ObjectManager.Player.Masteries.Where(mastery => mastery.Page == MasteryPage.Utility)
     .Any(mastery => mastery.Id == 100 && mastery.Points == 1))
                 {
-                    abilitySequence = new int[] { 2, 1, 1, 3, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 };
+                    abilitySequence = new int[] { 1, 2, 3, 1, 1, 4, 1, 2, 1, 2, 4, 2, 2, 3, 3, 4, 3, 3 };
                     tipo = " Support";
                 }
                 else
@@ -441,7 +441,7 @@ namespace AutoLevelup
                     tipo = " Lane";
                 }
             }
-            else if (Player.BaseSkinName == "Yasuo") abilitySequence = new int[] { 1, 3, 2, 1, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
+            else if (Player.BaseSkinName == "Yasuo") abilitySequence = new int[] { 3, 1, 1, 2, 1, 4, 1, 3, 1, 3, 4, 3, 3, 2, 2, 4, 2, 2 };
             else if (Player.BaseSkinName == "Yorick") abilitySequence = new int[] { 2, 3, 1, 3, 3, 4, 3, 2, 3, 1, 4, 2, 1, 2, 1, 4, 2, 1 };
             else if (Player.BaseSkinName == "Zac")
             {
